@@ -1,0 +1,4 @@
+type Mutation {
+    "authenticate user to access phonebook module"
+    login(email: String!, password: String!, device_name: String!): String!   
+}

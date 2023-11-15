@@ -1,0 +1,20 @@
+type Query {
+	"get all contact information"
+	listContacts: [Phonebook!]! @guard @all
+
+	"get specific contact inside phonebook"
+	viewContact(id: ID! @eq): Phonebook! @guard @find
+}
+
+extend type Mutation {
+	"create phonebook entry"
+	createContact(name: String!, contact_no: String!): Phonebook! @guard @create
+
+	"update contact information in the phonebook"
+	updateContact(id: ID!, name: String, contact_no: String): Phonebook! @guard @update
+
+	"delete contact information in phonebook"
+	deleteContact(id: ID! @whereKey): Phonebook! @guard @delete
+}
+
+

@@ -1,0 +1,22 @@
+
+"Phonebook Model"
+type Phonebook {
+	"unique ID as per contact person"
+	id: ID!
+
+	"name of each person"
+	name: String!
+
+	"contact number"
+	contact_no: String!
+	
+	created_at: DateTime!
+	updated_at: DateTime!
+}
+
+"User Model"
+type User {
+	id: ID!
+	name: String!
+	email: String!
+}
